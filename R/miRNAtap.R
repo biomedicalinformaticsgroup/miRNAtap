@@ -36,10 +36,13 @@ NULL
 #' @details This method performs aggregation of target lists from multiple 
 #' sources. Aggregated list is more accurate than any list from a single 
 #' source. Multiple aggregation methods are available.Direct target data from 
-#' four sources for Human and Mouse is supplied through targetPredictor.db 
+#' four sources for Human and Mouse is supplied through \code{miRNAtap.db} 
 #' package, for Rat targets are derived through homology translations whenever 
 #' direct ones are not available.
 #'
+#' @usage getPredictedTargets(mirna, sources = c("pictar", "diana", 
+#' "targetscan", "miranda"), species = "mmu", min_src = 2, 
+#' method = "min", promote = TRUE, ...)
 #' @param mirna miRNA in a standard format
 #' @param sources a list of sources to use for aggregation, 
 #' default c('pictar','diana','targetscan','miranda')
@@ -158,8 +161,8 @@ getPredictedTargets <- function(mirna,
 ####################
 #' @title Auxiliary targetPredictor functions
 #'
-#' @details This function performs aggregation phase of target prediction in 
-#' getPredictedTargets()
+#' @details This function performs aggregation phase of target prediction for 
+#' \code{\link{getPredictedTargets}} function
 #' @param ranks data.frame with ordered scored
 #' @param n_valid_srcs number of valid sources in the dataset
 #' @param min_src minimum acceptable number fo sources
@@ -222,7 +225,6 @@ reduce min_srcs parameter or add sources')
 #####################
 #  Auxiliary
 #####################
- 
 
 .aggregateGeom <- function(data1, rank_ind, promote=TRUE) {
     rank_ind[is.na(data1)] <- 1

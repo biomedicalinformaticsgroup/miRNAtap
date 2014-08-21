@@ -3,9 +3,9 @@
 \alias{getPredictedTargets}
 \title{Get aggregated ordered list of predicted targets for miRNA}
 \usage{
-getPredictedTargets(mirna, sources = c("pictar", "diana", "targetscan",
-  "miranda"), species = "mmu", min_src = 2, method = "min",
-  promote = TRUE, ...)
+getPredictedTargets(mirna, sources = c("pictar", "diana",
+"targetscan", "miranda"), species = "mmu", min_src = 2,
+method = "min", promote = TRUE, ...)
 }
 \arguments{
 \item{mirna}{miRNA in a standard format}
@@ -38,7 +38,7 @@ Get aggregated ordered list of predicted targets for miRNA
 This method performs aggregation of target lists from multiple
 sources. Aggregated list is more accurate than any list from a single
 source. Multiple aggregation methods are available.Direct target data from
-four sources for Human and Mouse is supplied through targetPredictor.db
+four sources for Human and Mouse is supplied through \code{miRNAtap.db}
 package, for Rat targets are derived through homology translations whenever
 direct ones are not available.
 }

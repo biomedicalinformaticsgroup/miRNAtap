@@ -23,8 +23,8 @@ data.frame object with aggregate ranks
 Auxiliary targetPredictor functions
 }
 \details{
-This function performs aggregation phase of target prediction in
-getPredictedTargets()
+This function performs aggregation phase of target prediction for
+\code{\link{getPredictedTargets}} function
 }
 \author{
 Maciej Pajak \email{m.pajak@sms.ed.ac.uk}
