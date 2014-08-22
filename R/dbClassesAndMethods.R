@@ -31,11 +31,11 @@
 #' genes and scores
 #' @author Maciej Pajak \email{m.pajak@@sms.ed.ac.uk}
 #' @exportClass MirnaDb
-#' @examples
-#' \dontrun{
+#' @examples 
+#' #first load the annotations
 #' require(miRNAtap.db)
 #' #see all available tables
-#' keytypes(miRNAtap.db)}
+#' keytypes(miRNAtap.db)
 .MirnaDb <- setRefClass('MirnaDb', contains='AnnotationDb')
 
 

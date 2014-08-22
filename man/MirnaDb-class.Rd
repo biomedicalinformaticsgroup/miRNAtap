@@ -59,10 +59,10 @@ database for predictions from a specific source and species for a
 given miRNA
 }
 \examples{
-\dontrun{
+#first load the annotations
 require(miRNAtap.db)
 #see all available tables
-keytypes(miRNAtap.db)}
+keytypes(miRNAtap.db)
 }
 \author{
 Maciej Pajak \email{m.pajak@sms.ed.ac.uk}
